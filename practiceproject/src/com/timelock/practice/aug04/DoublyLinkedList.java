@@ -1,6 +1,5 @@
 package com.timelock.practice.aug04;
 
-import java.io.*;
 import java.util.Scanner;
 
 class linkedlist1 {
@@ -31,7 +30,7 @@ class linked1 {
 		if(fstnode == null) {
 			node.prev = node.next = null;
 			fstnode = lastnode = node;
-			System.out.println("Lined list created successfully!");
+			System.out.println("Linked list created successfully!");
 		}
 		else {
 			node.prev = null;
@@ -63,6 +62,7 @@ class linked1 {
 	void delete() {
 		int count = 0, number, i;
 		linkedlist1 node, node1, node2;
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		
 		for(node = fstnode; node != null; node = node.next)
@@ -127,6 +127,7 @@ class linked1 {
 class DoublyLinkedList {
 	public static void main(String args[ ]) {
 		linked1 list = new linked1();
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		int op = 0;
 		while(op != 5) {
